@@ -53,8 +53,6 @@ function spinWheel() {
     const spinDuration = Math.random() * 5000 + 5000; // Spin time: 5-10 seconds
     const deceleration = spinSpeed / (spinDuration / 20); // Gradual slowdown per frame
 
-    playTicklingSound();
-
     const spinInterval = setInterval(() => {
         currentAngle += spinSpeed * Math.PI / 180; // Convert degrees to radians
         spinSpeed -= deceleration;
@@ -63,21 +61,10 @@ function spinWheel() {
             clearInterval(spinInterval);
             isSpinning = false;
             showResult();
-            stopTicklingSound(); // Stop sound when spin ends
         }
 
         drawWheel();
     }, 20);
-}
-
-// Play tickling sound (placeholder)
-function playTicklingSound() {
-    const sound = new Audio('./spin.mp3'); // 
-}
-
-// Stop tickling sound (placeholder)
-function stopTicklingSound() {
-    // Logic to stop the sound
 }
 
 // Show the result using SweetAlert
@@ -86,15 +73,11 @@ function showResult() {
     const winningIndex = Math.floor((sections.length - (finalAngle / (2 * Math.PI) * sections.length)) % sections.length);
     const winningAmount = sections[winningIndex];
     
-    Swal.fire({
-        title: 'Congratulations!',
-        text: `You won ${winningAmount}`,
-        icon: 'success',
-        confirmButtonText: 'OK'
-    });
+    alert(winningAmount);
 }
 
 // Initialize the wheel
 drawWheel();
+
 
 
