@@ -1,9 +1,9 @@
 const canvas = document.getElementById('spinWheel');
 const ctx = canvas.getContext('2d');
 
-const sections = ['Random Piece', 'Double your money', 'Free map expansion', 'Free ball'];
+const sections = ['Random Piece', 'Double your money ', 'Free map expansion ', 'Free ball'];
 const colors = [
-    '#FF6347', '#FFD700', '#32CD32', '#87CEEB'
+    '#890000', '#874100', '#848000', '#3c8200'
 ];
 
 const wheelRadius = canvas.width / 2;
@@ -96,4 +96,5 @@ function showResult() {
 
 // Initialize the wheel
 drawWheel();
+
 
