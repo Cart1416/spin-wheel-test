@@ -1,10 +1,9 @@
 const canvas = document.getElementById('spinWheel');
 const ctx = canvas.getContext('2d');
 
-const sections = ['1000', '2000', '3000', '4000', '5000', '6000', '7000', '8000', '9000', '10000', '0'];
+const sections = ['Random Piece', 'Double your money', 'Free map expansion', 'Free ball'];
 const colors = [
-    '#FF6347', '#FFD700', '#32CD32', '#87CEEB', '#6A5ACD',
-    '#FF69B4', '#00CED1', '#FFD700', '#DC143C', '#4682B4', '#32CD32'
+    '#FF6347', '#FFD700', '#32CD32', '#87CEEB'
 ];
 
 const wheelRadius = canvas.width / 2;
@@ -97,3 +96,4 @@ function showResult() {
 
 // Initialize the wheel
 drawWheel();
+
