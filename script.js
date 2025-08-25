@@ -17,7 +17,7 @@ function drawWheel() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     let startAngle = currentAngle;
 
-    sections.forEach((amount, index) => {
+    sections.forEach((text, index) => {
         const endAngle = startAngle + arcSize;
 
         // Draw slice
@@ -37,7 +37,7 @@ function drawWheel() {
         ctx.textAlign = 'center';
         ctx.fillStyle = 'white';
         ctx.font = 'bold 16px Arial';
-        ctx.fillText(amount, wheelRadius / 1.5, 10); // Text inside section
+        ctx.fillText(text, wheelRadius / 1.5, 10); // Text inside section
         ctx.restore();
 
         startAngle = endAngle;
@@ -78,6 +78,7 @@ function showResult() {
 
 // Initialize the wheel
 drawWheel();
+
 
 
 
